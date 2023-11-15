@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <body>
+            <div class="student-list">
+                <h1>Student List</h1>
+                <table border="1">
+              <thead>
+              <tr>
+                <th>Student Name</th>
+                <th>Student Gender</th>
+                <th>Actions</th>
+              </tr>
+              </thead>
+              <tbody>
+              {% for student in students %}
+                <tr>
+                  <td>{{ student.student_name }}</td>
+                  <td>{{ student.gender }}</td>
+                  <td>
+                    <a href="/edit{{ student.id }}">Edit</a>
+                    <a href="/delete{{ student.id }}">Delete</a>
+                  </td>
+                </tr>
+              {% endfor %}
+              </tbody>
+                </table>
+                <a href="/add">Add Student</a>
+                <a href="/generate">Generate Group</a>
+              </div>
+              
+        </body>
+    </head>
+</html>
+

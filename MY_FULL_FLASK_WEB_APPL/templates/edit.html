@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form class="main" action="/edit{{ student.id }}" method="POST">
+            <h1>Edit Student</h1>
+            <input type="text" name="student_name" id="student_name" value="{{ student.student_name }}" required>
+            <input type="text" name="gender" id="gender" value="{{ student.gender }}" required><br>
+            <button type="submit">Update Book</button>
+        </form>
+    </body>
+</html>
